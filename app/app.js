@@ -13,10 +13,13 @@ dotenv.config();
 import Stripe from "stripe";
 import Order from "../model/Order.js";
 import couponsRouter from "../routes/couponRoute.js";
+import cors from 'cors'
 
 const app = express();
 dbConnect();
 //Stripe Webhook
+app.use(cors());
+
 
 const stripe = new Stripe(process.env.STRIPE_KEY);
 
