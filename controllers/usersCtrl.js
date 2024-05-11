@@ -67,15 +67,15 @@ export const getUserProfile = asyncHandler(async (req, res) => {
 });
 
 export const updateShippingAddressCtrl = asyncHandler(async (req, res) => {
-  const { firstname, lastname, address, city, postalCode, province, phone } =
+  const { firstName, lastName, address, city, postalCode, province, phone } =
     req.body;
 
   const user = await User.findByIdAndUpdate(
     req.userAuthId,
     {
       shippingAddress: {
-        firstname,
-        lastname,
+        firstName,
+        lastName,
         address,
         city,
         postalCode,
