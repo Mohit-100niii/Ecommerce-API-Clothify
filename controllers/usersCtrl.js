@@ -73,7 +73,7 @@ export const updateShippingAddressCtrl = asyncHandler(async (req, res) => {
   const user = await User.findByIdAndUpdate(
     req.userAuthId,
     {
-      shippngAddress: {
+      shippingAddress: {
         firstname,
         lastname,
         address,
