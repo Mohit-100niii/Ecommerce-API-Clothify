@@ -6,7 +6,7 @@ const userRouter= express.Router();
 userRouter.post("/register",registerUserCtrl);
 userRouter.post("/login",loginUserCtrl);
 userRouter.get("/profile",isLoggedIn, getUserProfile);
-userRouter.post("/update/shipping",isLoggedIn,updateShippingAddressCtrl)
+userRouter.put("/update/shipping",isLoggedIn,updateShippingAddressCtrl)
 
 
 
