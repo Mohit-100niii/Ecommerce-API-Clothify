@@ -35,7 +35,7 @@ const UserSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    shippngAddress: {
+    shippingAddress: {
       firstName: {
         type: String,
       },
