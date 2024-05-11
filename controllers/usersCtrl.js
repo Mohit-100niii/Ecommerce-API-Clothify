@@ -70,7 +70,7 @@ export const updateShippingAddressCtrl = asyncHandler(async (req, res) => {
   const { firstname, lastname, address, city, postalCode, province, phone } =
     req.body;
 
-  const user = await User.findById(
+  const user = await User.findByIdAndUpdate(
     req.userAuthId,
     {
       shippngAddress: {
