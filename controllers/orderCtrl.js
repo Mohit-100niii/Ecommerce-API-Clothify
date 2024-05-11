@@ -77,7 +77,9 @@ export const createOrderCtrl = asyncHandler(async (req, res) => {
           name: item?.name,
           description: item?.description,
         },
-        unit_amount: item?.price * 100,
+        // unit_amount: item?.price * 100,
+        unit_amount:couponFound ? item?.price * 100 - item?.price * 100 * discount : item?.price * 100,
+       
       },
       quantity: item?.qty,
     };
